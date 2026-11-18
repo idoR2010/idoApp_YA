@@ -1,19 +1,91 @@
+
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:padding="20dp"
+    android:gravity="center_horizontal">
+
 
     <TextView
+        android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="לזכרו של ענר שפירא ז״ל"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#B8860B"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="12dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/ivMemoryImg"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:layout_marginBottom="14dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pic1"
+        android:alpha="0.95"
+        android:contentDescription="תמונת זיכרון לגיבור ענר שפירא ז״ל" />
+
+
+    <TextView
+        android:id="@+id/tvSubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="גיבור ישראל שהציל חיים במיגונית"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="#212121"
+        android:gravity="center"
+        android:layout_marginBottom="12dp" />
+
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="סמ״ר ענר אליקים שפירא ז״ל, לוחם בסיירת נח״ל, גילה אומץ רב כשמחבלים תקפו את המיגונית שבה שהה, ענר עמד בפתחה של המיגונית בידיים חשופות, והדף שוב ושוב את הרימונים שהושלכו פנימה והציל את חייהם של האנשים שהיו במגינות, עד שנפל בקרב. ענר תמיד יזכר כאדם גיבור ואמיץ."
+        android:textSize="14sp"
+        android:textColor="#333333"
+        android:background="#F5F5F5"
+        android:padding="16dp"
+        android:layout_margin="6dp"
+        android:gravity="top|start" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="8dp"
+        android:layout_gravity="bottom">
+
+        <TextView
+            android:id="@+id/tvQuote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="״אין אהבה גדולה מאשר למסור את הנפש למען חבריך״"
+            android:textSize="13sp"
+            android:textStyle="italic"
+            android:textColor="#B8860B"
+            android:gravity="center" />
+
+
+
+    </LinearLayout>
+
+    <Switch
+        android:id="@+id/sw1"
+        android:layout_width="119dp"
+        android:layout_height="9dp"
+        android:text="Switch" />
+
+</LinearLayout>
