@@ -1,8 +1,14 @@
 package com.katza.idor_firstapp_ya;
 
+import static android.view.View.INVISIBLE;
+import static androidx.constraintlayout.widget.ConstraintSet.VISIBLE;
+
 import android.os.Bundle;
+import android.widget.CompoundButton;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -21,6 +27,16 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-
+        @Override
+        public void onCheckChanged(@NonNull CompoundButton compoundButton, boolean b)
+        {
+            if(b) {
+                btnFB.setVisibility(VISIBLE);
+                Toast.makeText(this, "true", Toast.LENGTH_SHORT).show();
+            }else {
+                btnSF.setVisibility(INVISIBLE);
+                Toast.makeText(this, "false", Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 }
