@@ -1,9 +1,11 @@
 package com.katza.idor_firstapp_ya;
 
+
 import static android.view.View.INVISIBLE;
-import static androidx.constraintlayout.widget.ConstraintSet.VISIBLE;
+import static android.view.View.VISIBLE;
 
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Toast;
 
@@ -16,6 +18,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
+    Button btnFB,btnSF;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
 
         @Override
         public void onCheckChanged(@NonNull CompoundButton compoundButton, boolean b)
